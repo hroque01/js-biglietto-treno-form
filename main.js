@@ -10,10 +10,11 @@ btnConferma.addEventListener('click',
     function() {
 
         // variabili
-        const userName = document.getElementById('nome')
+        const userName = document.getElementById('nome');
         const nomeCognome = userName.value;
 
-        const userKm = document.getElementById('km').value;
+        const userKm = document.getElementById('km');
+        const kmViaggio = parseInt(userKm.value);
 
         const userAge = document.getElementById('etaUtente').value;
 
@@ -25,9 +26,7 @@ btnConferma.addEventListener('click',
 
         // append null
         userName.value = null;
-        
-
-
+        userKm.value = null;
     
         // Carrozza numero random
         const carrozzaRandom = Math.floor(Math.random() * 10) +1;
@@ -37,8 +36,8 @@ btnConferma.addEventListener('click',
         const codiceUtente = Math.floor(Math.random() * 10000) +1;
         document.getElementById('codicePasseggero').innerHTML = codiceUtente
 
-        // // prezzo
-        const prezzoIntero = (userKm * prezzo).toFixed(2);
+        // prezzo
+        const prezzoIntero = (kmViaggio * prezzo).toFixed(2);
 
         // SE minorenne 20% di sconto
         if (userAge == "minorenne") {
@@ -62,6 +61,33 @@ btnConferma.addEventListener('click',
             document.getElementById('sconti').innerHTML = 'Biglietto Standard';
             document.getElementById('prezzoTotale').innerHTML = `€ ${prezzoIntero}`
         }
+
+        // classi display none e display block
+        const ticket = document.getElementById('ticket');
+        ticket.classList.add('d-block')
+        ticket.classList.remove('d-none')
+    }
+)
+
+// BOTTONE RESET
+btnReset.addEventListener("click",
+    function () {
+        n = 0;
+
+        // classi display none e display block
+        ticket.classList.add('d-none')
+        ticket.classList.remove('d-block')
+
+        // output
+        document.getElementById('numeroCarrozza').innerHTML = null;
+
+        document.getElementById('codicePasseggero').innerHTML = null;
+
+        document.getElementById('sconti').innerHTML = null;
+
+        document.getElementById('prezzoTotale').innerHTML = null;
+
+        document.getElementById('prezzoTotale').innerHTML = null;
 
 
     }

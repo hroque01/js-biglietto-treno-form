@@ -4,10 +4,26 @@
     box-sizing: border-box;
 }
 
-/* MILESTONE 1 */
-.input {
+body {
+    background-color: #b91450;
+}
+
+h1 {
     display: flex;
     justify-content: center;
+    font-size: 25px;
+    margin: 30px auto;
+    color: white;
+    font-weight: bold;
+}
+/* MILESTONE 1 */
+.milestone1 {
+    margin: 15px 500px;
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
     margin: 0 auto;
 }
 
@@ -30,3 +46,12 @@
 
     
 /* MILESTONE 2 */
+.milestone2 {
+    margin: 15px 500px;
+    display: none;
+}
+
+    #nomePasseggero {
+        color: white;
+    }
+
