@@ -79,6 +79,8 @@ btnReset.addEventListener("click",
         ticket.classList.remove('d-block')
 
         // output
+        document.getElementById('nomePasseggero').innerHTML = null;
+
         document.getElementById('numeroCarrozza').innerHTML = null;
 
         document.getElementById('codicePasseggero').innerHTML = null;
