@@ -14,10 +14,8 @@ btnConferma.addEventListener('click',
         const nomeCognome = userName.value;
 
         const userKm = document.getElementById('km').value;
-        const kmViaggio = userKm.value;
 
-        const userAge = document.getElementById('etaUtente');
-        const fasciaEta = userAge.value;
+        const userAge = document.getElementById('etaUtente').value;
 
         const userTicketName = document.getElementById('nomePasseggero');
 
