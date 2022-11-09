@@ -4,9 +4,29 @@
     box-sizing: border-box;
 }
 
-.milestone2 {
+/* MILESTONE 1 */
+.input {
     display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
-
+    justify-content: center;
+    margin: 0 auto;
 }
+
+    .block {
+        padding: 0 30px;
+    }
+
+    .block h3 {
+        padding-bottom: 10px;
+    }
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+    .buttons button {
+        margin: 20px 15px;
+    }
+
+    
+/* MILESTONE 2 */
