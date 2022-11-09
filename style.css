@@ -21,10 +21,15 @@ h1 {
     margin: 15px 500px;
 }
 
+.responsive {
+    min-width: 100%;
+}
+
 .input {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+    width: 100%;
 }
 
     .block {
@@ -41,7 +46,7 @@ h1 {
     margin: 0 auto;
 }
     .buttons button {
-        margin: 20px 15px;
+        margin: 30px 15px;
     }
 
     
@@ -55,3 +60,44 @@ h1 {
         color: white;
     }
 
+/* INPUTS */
+
+input {
+    border: 1px solid #b91450;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+select {
+    border: 1px solid #b91450;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: white;
+}
+
+button {
+    border: 1px solid #b91450;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: white;
+}
+
+@media all and (max-width:1800px ) {
+    .milestone1 {
+        margin: 15px 200px;
+    }
+
+    .milestone2 {
+        margin: 15px 200px;
+    }
+}
+
+@media all and (max-width:1200px ) {
+    .milestone1 {
+        margin: 15px 100px;
+    }
+
+    .milestone2 {
+        margin: 15px 100px;
+    }
+}
