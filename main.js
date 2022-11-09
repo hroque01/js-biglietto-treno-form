@@ -1,32 +1,37 @@
-// Chiedere i dati
+const btnConferma = document.getElementById('conferma');
+const btnReset = document.getElementById('reset');
+const prezzo = 1
 
-const nome = document.getElementById('identity');
-const km = document.getElementById('identityKm')
-const inputField = document.getElementById('nome');
-const inputFieldKm = document.getElementById('km')
-const btn = document.getElementById('btn')
-
-// bottone genera biglietto
-btn.addEventListener('click', 
+btnConferma.addEventListener('click',
 
     function() {
-        // Chiedere il nome
-        let riempimento = inputField.value;
-        nome.append(riempimento);
-        // Chiedere i quanti km fare
-        let riempimento2 = inputFieldKm.value;
-        km.append(riempimento2);
-        // auto-annullamento della value
-        inputField.value = null;
-        inputFieldKm.value = null;
+        const userName = document.getElementById('nome').value;
+        const userKm = document.getElementById('km').value;
+        const userAge = document.getElementById('etaUtente').value;
+
+        // // prezzo
+        const prezzoIntero = (userKm * prezzo).toFixed(2);
+
+        // SE minorenne 20% di sconto
+        if (userAge == "minorenne") {
+            let sconto = prezzoIntero * 20 / 100;
+            let costo = (prezzoIntero - sconto).toFixed(2);
+            
+        } 
+        // ALRIMENTI SE over 65 sconto di 40%
+        else if  (userAge == "over65") {
+            let sconto = prezzoIntero * 40 / 100;
+            let costo = (prezzoIntero - sconto).toFixed(2);
+            
+        } 
+        // ALTRIMENTI NIENTE SCONTO
+        else {
+            
+        }
+        
+        
+
     }
 
-);
-
-// selezionare con un dropdown l'eta
-
-    // minorenne sconto del 20%
-
-    // piu di 65 anni sconto del 40%
-
-// output
+    
+)
